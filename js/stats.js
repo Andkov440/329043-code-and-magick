@@ -43,6 +43,7 @@ window.renderStatistics = function (ctx, names, times) {
   var maxTime = getMaxElement(times);
   for (var i = 0; i < names.length; i++) {
     var playersColor = 'rgba(0, 0, 255, ' + Math.random() + ')';
+    ctx.fillText(Math.round(times[i]), CLOUD_X + COLUMN_GAP * (i + 1) + COLUMN_WIDTH * i, CLOUD_X + BAR_HEIGHT - BAR_HEIGHT * Math.round(times[i]) / maxTime - GAP * 2);
     ctx.fillStyle = (names[i] === 'Вы') ? MY_COLOR : playersColor;
     ctx.fillRect(CLOUD_X + COLUMN_GAP * (i + 1) + COLUMN_WIDTH * i, CLOUD_X + BAR_HEIGHT - BAR_HEIGHT * Math.round(times[i]) / maxTime, COLUMN_WIDTH, BAR_HEIGHT * Math.round(times[i]) / maxTime);
     ctx.fillStyle = TEXT_COLOR;
