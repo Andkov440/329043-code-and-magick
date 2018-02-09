@@ -104,5 +104,4 @@ wizardEyes.addEventListener('click', function () {
 
 setupFireballWrap.addEventListener('click', function () {
   setupFireballWrap.style.background = FIREBALL_COLORS[randomValue(FIREBALL_COLORS.length)];
-  console.log(setupFireballWrap.style.fill);
 });
